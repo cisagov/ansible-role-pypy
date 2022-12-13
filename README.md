@@ -1,8 +1,7 @@
 # ansible-role-pypy #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-pypy/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-pypy/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-pypy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-pypy/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-pypy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-pypy/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-pypy/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-pypy/actions/workflows/codeql-analysis.yml)
 
 This is a skeleton project that can be used to quickly get a new
 [cisagov](https://github.com/cisagov) Ansible role GitHub project
@@ -39,8 +38,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - skeleton
+  tasks:
+    - name: Include skeleton
+      ansible.builtin.include_role:
+        name: skeleton
 ```
 
 ## New Repositories from a Skeleton ##
