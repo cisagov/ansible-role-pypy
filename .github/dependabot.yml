@@ -1,5 +1,4 @@
 ---
-
 # Any ignore directives should be uncommented in downstream projects to disable
 # Dependabot updates for the given dependency. Downstream projects will get
 # these updates when the pull request(s) in the appropriate skeleton are merged
@@ -24,10 +23,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    # ignore:
-    #   # Managed by cisagov/skeleton-ansible-role
-    #   - dependency-name: "ansible"
-    #   - dependency-name: "ansible-lint"
+    ignore:
+      # Managed by cisagov/skeleton-ansible-role
+      - dependency-name: "ansible"
+      - dependency-name: "ansible-lint"
 
   - package-ecosystem: "terraform"
     directory: "/"
